@@ -4,7 +4,7 @@ function PokemonCard({ pokemon }) {
     console.log(pokemon);
 
     return (
-        <div>
+        <div className="Pokecard">
             <h1>Carte Pokémon</h1>
             <figure>
                 {pokemon.imgSrc ? (
