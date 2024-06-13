@@ -11,12 +11,26 @@
 
 .nav-bar {
   display: flex;
-  justify-content: center; 
-  gap: 1rem; 
+  justify-content: center;
+  gap: 1rem;
   padding: 2rem;
 }
 
 .nav-button {
   padding: 0.5rem 1rem;
   font-size: 1rem;
+}
+
+.pokemon-card {
+  margin: 2rem;
+}
+
+.pokemon-name {
+  font-size: 2rem; /* Change the font size */
+  color: #ff6347; /* Change the font color */
+  text-transform: capitalize; /* Capitalize the first letter */
+  margin-bottom: 1rem; /* Add space below the name */
+  font-weight: bold; /* Make the font bold */
+  text-shadow: 2px 2px 4px #000000; /* Add a text shadow */
+  font-family: 'Arial', sans-serif; /* Change the font family */
 }

@@ -1,29 +1,20 @@
-import PropTypes from "prop-types";
+/* eslint-disable no-unused-vars */
+import React from 'react';
+import PropTypes from 'prop-types';
 
-function PokemonCard({ pokemon }) {
-    console.log(pokemon);
-
+const PokemonCard = ({ pokemon }) => {
     return (
-        <div className="Pokecard">
-            <h1>Carte Pokémon</h1>
-            <figure>
-                {pokemon.imgSrc ? (
-                    <img src={pokemon.imgSrc} alt={`Image du Pokémon ${pokemon.name}`} />
-                ) : (
-                    <p>???</p>
-                )}
-                <figcaption>
-                    <p>{pokemon.name}</p>
-                </figcaption>
-            </figure>
+        <div className="pokemon-card">
+            <h2 className="pokemon-name">{pokemon.name}</h2>
+            {pokemon.imgSrc && <img src={pokemon.imgSrc} alt={pokemon.name} />}
         </div>
     );
-}
+};
 
 PokemonCard.propTypes = {
     pokemon: PropTypes.shape({
-        imgSrc: PropTypes.string,
         name: PropTypes.string.isRequired,
+        imgSrc: PropTypes.string,
     }).isRequired,
 };
 
